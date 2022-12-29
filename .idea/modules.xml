@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/zerobase-cms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/zerobase-cms.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/zerobase-cms.test.iml" filepath="$PROJECT_DIR$/.idea/modules/zerobase-cms.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zerobase-domain/zerobase-cms.zerobase-domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/zerobase-domain/zerobase-cms.zerobase-domain.main.iml" />
     </modules>
   </component>
 </project>
