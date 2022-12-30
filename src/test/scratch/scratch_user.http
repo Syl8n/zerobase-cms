@@ -1,0 +1,63 @@
+### 회원가입 (고객)
+POST http://localhost:8081/signup/customer
+Content-Type: application/json
+
+{
+  "birth": "2022-12-30",
+  "email": "magi8520@gmail.com",
+  "name": "yaaloo",
+  "password": "1234",
+  "phone": "01011112222"
+}
+
+### 이메일 인증 (고객)
+GET http://localhost:8081/signup/customer/verify?email=magi8520@gmail.com&code=
+
+### 로그인 (고객)
+POST http://localhost:8081/signIn/customer
+Content-Type: application/json
+
+{
+  "email": "magi8520@gmail.com",
+  "password": "1234"
+}
+
+### 회원 정보 조회 (고객)
+GET http://localhost:8081/customer/getInfo
+Content-Type: application/json
+X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzI0MTAxNTYsImV4cCI6MTY3MjQ5NjU1Nn0.oEWdfOCNLQKWCbRtC22S3HIhoM16WOhKtR3yq6RCYKU
+
+### 잔액 변경 (고객)
+POST http://localhost:8081/customer/balance
+Content-Type: application/json
+X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzI0MTAxNTYsImV4cCI6MTY3MjQ5NjU1Nn0.oEWdfOCNLQKWCbRtC22S3HIhoM16WOhKtR3yq6RCYKU
+
+{
+  "from": "abc",
+  "message": "test input",
+  "money": -5000
+}
+
+
+#######################
+
+### 회원가입 (셀러)
+POST http://localhost:8081/signup/seller
+Content-Type: application/json
+
+{
+  "birth": "2022-12-30",
+  "email": "magi8520@gmail.com",
+  "name": "yaaloo",
+  "password": "1234",
+  "phone": "01011112222"
+}
+
+### 로그인 (셀러)
+POST http://localhost:8081/signIn/seller
+Content-Type: application/json
+
+{
+  "email": "magi8520@gmail.com",
+  "password": "1234"
+}
