@@ -1,4 +1,4 @@
-package com.zerobase.cms.zerobasecms.service;
+package com.zerobase.cms.zerobasecms.service.customer;
 
 import com.zerobase.cms.zerobasecms.domain.model.Customer;
 import com.zerobase.cms.zerobasecms.exception.CustomException;
