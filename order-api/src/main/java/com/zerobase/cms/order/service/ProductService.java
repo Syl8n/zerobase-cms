@@ -45,4 +45,13 @@ public class ProductService {
         return product;
     }
 
+    public Product deleteProduct(Long sellerId, Long productId){
+        Product product = productRepository.findBySellerIdAndId(sellerId, productId)
+            .orElseThrow(() -> new CustomException(ErrorCode.PRODUCT_NOT_FOUND));
+
+        productRepository.delete(product);
+
+        return product;
+    }
+
 }

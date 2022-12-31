@@ -46,4 +46,14 @@ public class ProductItemService {
         return productItem;
     }
 
+    @Transactional
+    public ProductItem deleteProductItem(Long sellerId, Long productItemId){
+        ProductItem productItem = productItemRepository.findById(productItemId)
+            .filter(pi -> pi.getSellerId().equals(sellerId))
+            .orElseThrow(() -> new CustomException(ErrorCode.ITEM_NOT_FOUND));
+
+        productItemRepository.delete(productItem);
+        return productItem;
+    }
+
 }
