@@ -3,7 +3,7 @@ POST http://localhost:8081/signup/customer
 Content-Type: application/json
 
 {
-  "birth": "2022-12-30",
+  "birth": "2022-12-31T16:14:48.107Z",
   "email": "magi8520@gmail.com",
   "name": "yaaloo",
   "password": "1234",
@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ### 이메일 인증 (고객)
-GET http://localhost:8081/signup/customer/verify?email=magi8520@gmail.com&code=
+GET http://localhost:8081/signup/customer/verify?email=magi8520@gmail.com&code=oxgh83LkOV
 
 ### 로그인 (고객)
 POST http://localhost:8081/signIn/customer
@@ -39,19 +39,21 @@ X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCR
 }
 
 
-#######################
 
 ### 회원가입 (셀러)
 POST http://localhost:8081/signup/seller
 Content-Type: application/json
 
 {
-  "birth": "2022-12-30",
+  "birth": "2022-12-31T16:14:48.107Z",
   "email": "magi8520@gmail.com",
   "name": "yaaloo",
   "password": "1234",
   "phone": "01011112222"
 }
+
+### 이메일 인증 (셀러)
+GET http://localhost:8081/signup/seller/verify?email=magi8520@gmail.com&code=KZM02hPs20
 
 ### 로그인 (셀러)
 POST http://localhost:8081/signIn/seller
