@@ -19,8 +19,14 @@ public class CartService {
 
     private final RedisClient redisClient;
 
+    public Cart putCart(Long customerId, Cart cart){
+        redisClient.put(customerId, cart);
+        return cart;
+    }
+
     public Cart getCart(Long customerId){
-        return redisClient.get(customerId, Cart.class);
+        Cart cart = redisClient.get(customerId, Cart.class);
+        return cart != null ? cart : new Cart(customerId);
     }
 
     public Cart addCart(Long customerId, AddProductCartForm form) {
@@ -28,8 +34,7 @@ public class CartService {
         Cart cart = redisClient.get(customerId, Cart.class);
 
         if (cart == null) {
-            cart = new Cart();
-            cart.setCustomerId(customerId);
+            cart = new Cart(customerId);
         }
 
         // 장바구니 내 중복 상품 체크
