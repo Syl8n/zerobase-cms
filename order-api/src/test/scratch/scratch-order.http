@@ -38,7 +38,7 @@ X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCR
   "description": "신발입니다",
   "items": [
     {
-      "id" : 1,
+      "id" : 2,
       "count": 1,
       "name": "나이키 에어포스",
       "price": 140000,
@@ -60,3 +60,14 @@ X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCR
   "price": 70000,
   "productId": 1
 }
+
+### 상품 삭제
+DELETE http://localhost:8082/seller/product?id=1
+Content-Type: application/json
+X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjcyNDE3MjA2LCJleHAiOjE2NzI1MDM2MDZ9.N_kDUfTTx0B87MIkfbLq5uBczXPl_0kM6YrbAtHzrfs
+
+
+### 상품 아이템 삭제
+DELETE http://localhost:8082/seller/product/item?id=1
+Content-Type: application/json
+X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjcyNDE4NjE1LCJleHAiOjE2NzI1MDUwMTV9.8XfVyWAMYnYXLLF5W6vJ8INd3ilXY8lze_8Fmn_XeY4
