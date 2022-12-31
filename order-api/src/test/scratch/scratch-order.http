@@ -13,7 +13,7 @@ X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCR
       "productId": 1
     }
   ],
-  "name": "신발2"
+  "name": "신발"
 }
 
 ### 상품 아이템 추가
@@ -78,6 +78,27 @@ Content-Type: application/json
 X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjcyNDE3MjA2LCJleHAiOjE2NzI1MDM2MDZ9.N_kDUfTTx0B87MIkfbLq5uBczXPl_0kM6YrbAtHzrfs
 
 ### 상품 상세 조회
-GET http://localhost:8082/search/product/detail?productId=1
+GET http://localhost:8082/search/product/detail?productId=2
 Content-Type: application/json
 X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjcyNDE4NjE1LCJleHAiOjE2NzI1MDUwMTV9.8XfVyWAMYnYXLLF5W6vJ8INd3ilXY8lze_8Fmn_XeY4
+
+
+### 카트 상품 추가
+POST http://localhost:8082/customer/cart
+Content-Type: application/json
+X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjcyNDE3MjA2LCJleHAiOjE2NzI1MDM2MDZ9.N_kDUfTTx0B87MIkfbLq5uBczXPl_0kM6YrbAtHzrfs
+
+{
+  "id": 2,
+  "description": "신발입니다",
+  "items": [
+    {
+      "count": 1,
+      "name": "나이키 신발",
+      "price": 100000,
+      "id": 2
+    }
+  ],
+  "name": "신발2",
+  "sellerId": 1
+}
