@@ -1,0 +1,19 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/zeroorder?useSSL=false&useUnicode=true&allowPublicKeyRetrieval=true
+    username: root
+    password: 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  redis:
+    port: 6379
+    host: localhost
+
+server:
+  port: 8082

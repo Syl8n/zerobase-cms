@@ -17,7 +17,6 @@ class ProductServiceTest {
 
     @Autowired
     private ProductService productService;
-
     @Autowired
     private ProductRepository productRepository;
 
