@@ -13,7 +13,7 @@ X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCR
       "productId": 1
     }
   ],
-  "name": "신발"
+  "name": "신발2"
 }
 
 ### 상품 아이템 추가
@@ -69,5 +69,15 @@ X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCR
 
 ### 상품 아이템 삭제
 DELETE http://localhost:8082/seller/product/item?id=1
+Content-Type: application/json
+X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjcyNDE4NjE1LCJleHAiOjE2NzI1MDUwMTV9.8XfVyWAMYnYXLLF5W6vJ8INd3ilXY8lze_8Fmn_XeY4
+
+### 상품 검색
+GET http://localhost:8082/search/product?name=신
+Content-Type: application/json
+X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjcyNDE3MjA2LCJleHAiOjE2NzI1MDM2MDZ9.N_kDUfTTx0B87MIkfbLq5uBczXPl_0kM6YrbAtHzrfs
+
+### 상품 상세 조회
+GET http://localhost:8082/search/product/detail?productId=1
 Content-Type: application/json
 X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjcyNDE4NjE1LCJleHAiOjE2NzI1MDUwMTV9.8XfVyWAMYnYXLLF5W6vJ8INd3ilXY8lze_8Fmn_XeY4
