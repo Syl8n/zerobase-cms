@@ -1,0 +1,25 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://{RDS}/zeroorder?useSSL=false&useUnicode=true&allowPublicKeyRetrieval=true
+    username: zerobaseadmin
+    password: zerobase!
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    database: mysql
+  redis:
+    host: {ec-redis}
+    port: 6379
+
+server:
+  port: 8082
+
+feign:
+  client:
+    url:
+      user-api: {EC2}:8081
