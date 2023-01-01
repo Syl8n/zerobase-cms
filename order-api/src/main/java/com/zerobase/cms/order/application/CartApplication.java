@@ -8,7 +8,6 @@ import com.zerobase.cms.order.exception.CustomException;
 import com.zerobase.cms.order.exception.ErrorCode;
 import com.zerobase.cms.order.service.CartService;
 import com.zerobase.cms.order.service.ProductSearchService;
-import com.zerobase.domain.common.UserVo;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -21,6 +20,11 @@ import org.springframework.stereotype.Service;
 public class CartApplication {
     public final CartService cartService;
     private final ProductSearchService productSearchService;
+
+    public Cart updateCart(Long customerId, Cart cart){
+        cartService.putCart(customerId, cart);
+        return getCart(customerId);
+    }
 
     public void clearCart(Long customerId){
         cartService.putCart(customerId, null);
@@ -72,7 +76,7 @@ public class CartApplication {
 
                 if(cartItem.getCount() > productItem.getCount()){
                     isCountNotEnough = true;
-                    cartItem.setCount(Math.min(cartItem.getCount(), productItem.getCount()));
+                    cartItem.setCount(productItem.getCount());
                 }
 
                 if(isPriceChanged && isCountNotEnough){
@@ -89,7 +93,7 @@ public class CartApplication {
                 cart.addMessage(cartProduct.getName() + "상품의 옵션이 모두 없어져 구매가 불가능합니다.");
             } else if(tmpMessages.size() > 0){
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.append(cartProduct.getName() + " 상품의 변동 사항: ");
+                stringBuilder.append(cartProduct.getName()).append(" 상품의 변동 사항: ");
                 for(String msg : tmpMessages){
                     stringBuilder.append(msg);
                     stringBuilder.append(", ");
