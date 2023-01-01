@@ -30,12 +30,12 @@ X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCR
 ### 잔액 변경 (고객)
 POST http://localhost:8081/customer/balance
 Content-Type: application/json
-X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzI0MTAxNTYsImV4cCI6MTY3MjQ5NjU1Nn0.oEWdfOCNLQKWCbRtC22S3HIhoM16WOhKtR3yq6RCYKU
+X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjcyNTY4MTMwLCJleHAiOjE2NzI2NTQ1MzB9.wfpT3-8sW22Kmz85KWLT_JGRLjMJe_mbEV5kjaMlPEY
 
 {
   "from": "abc",
   "message": "test input",
-  "money": -5000
+  "money": 500000
 }
 
 
