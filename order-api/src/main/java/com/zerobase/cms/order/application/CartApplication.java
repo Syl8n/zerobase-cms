@@ -40,7 +40,7 @@ public class CartApplication {
         return returnCart;
     }
 
-    private Cart refreshCart(Cart cart){
+    protected Cart refreshCart(Cart cart){
         Map<Long, Product> productMap = productSearchService.getListByProductIds(cart.getProducts()
                 .stream().map(Cart.Product::getId).collect(Collectors.toList()))
             .stream().collect(Collectors.toMap(Product::getId, p -> p));

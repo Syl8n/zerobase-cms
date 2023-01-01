@@ -1,7 +1,7 @@
 ### 상품 추가
 POST http://localhost:8082/seller/product
 Content-Type: application/json
-X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjcyNDE3MjA2LCJleHAiOjE2NzI1MDM2MDZ9.N_kDUfTTx0B87MIkfbLq5uBczXPl_0kM6YrbAtHzrfs
+X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjcyNTY4MTMwLCJleHAiOjE2NzI2NTQ1MzB9.wfpT3-8sW22Kmz85KWLT_JGRLjMJe_mbEV5kjaMlPEY
 
 {
   "description": "신발입니다",
@@ -86,19 +86,50 @@ X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCR
 ### 카트 상품 추가
 POST http://localhost:8082/customer/cart
 Content-Type: application/json
-X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjcyNDE3MjA2LCJleHAiOjE2NzI1MDM2MDZ9.N_kDUfTTx0B87MIkfbLq5uBczXPl_0kM6YrbAtHzrfs
+X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjcyNTY4MTMwLCJleHAiOjE2NzI2NTQ1MzB9.wfpT3-8sW22Kmz85KWLT_JGRLjMJe_mbEV5kjaMlPEY
 
 {
-  "id": 2,
+  "id": 1,
   "description": "신발입니다",
   "items": [
     {
       "count": 1,
       "name": "나이키 신발",
       "price": 100000,
-      "id": 2
+      "id": 1
     }
   ],
-  "name": "신발2",
+  "name": "신발",
   "sellerId": 1
+}
+
+### 카트 조회
+GET http://localhost:8082/customer/cart
+Content-Type: application/json
+X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjcyNTY4MTMwLCJleHAiOjE2NzI2NTQ1MzB9.wfpT3-8sW22Kmz85KWLT_JGRLjMJe_mbEV5kjaMlPEY
+
+### 카트 주문
+POST http://localhost:8082/customer/cart/order
+Content-Type: application/json
+X-Auth-Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJIbTRTZnI1eFBESDhGTFNPY0tmbXhtSlFCRmd2ellRU3J4WnFCWFYyYmc0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjcyNTY4MTMwLCJleHAiOjE2NzI2NTQ1MzB9.wfpT3-8sW22Kmz85KWLT_JGRLjMJe_mbEV5kjaMlPEY
+
+{
+  "customerId": 1,
+  "products": [
+    {
+      "id": 1,
+      "sellerId": 1,
+      "name": "신발",
+      "description": "신발입니다",
+      "items": [
+        {
+          "id": 1,
+          "name": "나이키 신발",
+          "count": 1,
+          "price": 100000
+        }
+      ]
+    }
+  ],
+  "messages": []
 }
